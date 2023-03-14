@@ -1,7 +1,7 @@
 locals {
   tfc_hostname        = "app.terraform.io"
   project             = get_env("LICENSE_PLATE")
-  environment         = reverse(split("/", get_terragrunt_dir()))[0]
+  environment         = reverse(split("/",get_terragrunt_dir()))[0]
   app_image           = get_env("app_image", "")
 }
 
